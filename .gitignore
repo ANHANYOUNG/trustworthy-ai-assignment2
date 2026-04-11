@@ -1,3 +1,5 @@
 /data
 /deepxplore
 /ckpts
+/results
+__pycache__
