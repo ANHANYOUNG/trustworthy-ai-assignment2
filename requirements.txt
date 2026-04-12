@@ -1,0 +1,10 @@
+# Core runtime
+torch
+torchvision
+numpy
+matplotlib
+tqdm
+
+# Notebook / debugging
+jupyter
+ipykernel
