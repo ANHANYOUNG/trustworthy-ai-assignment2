@@ -1,5 +1,4 @@
 /data
 /deepxplore
-/ckpts
-/results
 __pycache__
+.codex
