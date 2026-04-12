@@ -1,0 +1,7 @@
+# Brief Discussion
+
+In my experiments, the three transformations did not show the same behavior. The `light` transformation produced no generated disagreement, while both `black` and `occl` produced 5 disagreement-inducing inputs. More importantly, the prediction patterns were different. After the `black` transformation, predictions often moved to relatively similar classes, such as `automobile -> truck` and `deer -> horse`. After the `occl` transformation, larger label changes appeared more often, such as `horse -> airplane` and `airplane -> horse`.
+
+This pattern suggests that the two transformations affected the models in different ways. The `black` transformation seems to remove small local details, so some overall class information may still remain, which often leads to confusion with a nearby class. In contrast, the `occl` transformation hides a larger part of the image, which is more likely to remove important object evidence. As a result, the model may depend more on incomplete remaining cues, which can lead to a larger label change.
+
+Overall, my results suggest that differential testing in this setup revealed differences in feature sensitivity between the two ResNet50 models. Although the models showed similar behavior on clean inputs, they did not respond in the same way after corruption.
